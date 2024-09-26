@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Experience from "@/components/Experience";
 import Service from "@/components/Service";
 import Videos from "@/components/Videos";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Experience />
       <Service />
       <Videos />
+      <Contact />
       <Footer />
     </>
   );
