@@ -32,7 +32,7 @@ export default function About() {
                   About Us
                 </h2>
                 <p className="font-normal text-xl leading-8 text-gray-500 max-lg:text-center max-w-2xl mx-auto">
-                  Driven by a passion for seamless user experiences, we've
+                  Driven by a passion for seamless user experiences, we have
                   meticulously curated pagedone to empower creators, designers,
                   and developers alike. Our mission is to provide a
                   comprehensive toolkit, enabling you to build intuitive,
@@ -60,7 +60,7 @@ export default function About() {
                 </h2>
                 <p className="font-normal text-xl leading-8 text-gray-500 max-lg:text-center max-w-2xl mx-auto">
                   Pagedone isn’t just a collection of components and guidelines;
-                  it's a philosophy. We go beyond aesthetics, prioritizing
+                  it is a philosophy. We go beyond aesthetics, prioritizing
                   accessibility, scalability, and usability. Every element, from
                   the tiniest detail to the grandest layout, is meticulously
                   crafted to enhance functionality and elevate user
