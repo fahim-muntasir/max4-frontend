@@ -8,7 +8,7 @@ export default function Videos() {
           <div className="p-4 md:w-1/3 w-full">
             <div className="h-full border-2 border-gray-200 border-opacity-60  overflow-hidden">
               <iframe
-                className="lg:h-60 md:h-52 h-52 w-full object-cover object-center"
+                className="lg:h-64 md:h-52 h-52 w-full object-cover object-center"
                 src="https://www.youtube.com/embed/TJSfbbYx5q8?si=IHhDDfrzmWyyhTP7"
                 title="YouTube video player"
                 frameborder="0"
@@ -26,7 +26,7 @@ export default function Videos() {
           <div className="p-4 md:w-1/3 w-full">
             <div className="h-full border-2 border-gray-200 border-opacity-60  overflow-hidden">
               <iframe
-                className="lg:h-60 md:h-52 h-52 w-full object-cover object-center"
+                className="lg:h-64 md:h-52 h-52 w-full object-cover object-center"
                 src="https://www.youtube.com/embed/TJSfbbYx5q8?si=IHhDDfrzmWyyhTP7"
                 title="YouTube video player"
                 frameborder="0"
@@ -44,7 +44,7 @@ export default function Videos() {
           <div className="p-4 md:w-1/3 w-full">
             <div className="h-full border-2 border-gray-200 border-opacity-60  overflow-hidden">
               <iframe
-                className="lg:h-60 md:h-52 h-52 w-full object-cover object-center"
+                className="lg:h-64 md:h-52 h-52 w-full object-cover object-center"
                 src="https://www.youtube.com/embed/TJSfbbYx5q8?si=IHhDDfrzmWyyhTP7"
                 title="YouTube video player"
                 frameborder="0"
