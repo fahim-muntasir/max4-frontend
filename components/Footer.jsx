@@ -7,19 +7,19 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 py-10 max-md:max-w-sm max-md:mx-auto">
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-            <a
-              href="javascript:;"
+            <Link
+              href="/"
               className="cursor-pointer flex justify-center lg:justify-start text-2xl text-[#FF885B]"
             >
-              Max4bd
-            </a>
+              <img src="/assets/img/logo2.png" alt="logo" />
+            </Link>
             <p className="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
               Trusted in more than 100 countries & 5 million customers. Have any
               query ?
             </p>
             <Link
               href="/contact"
-              className="py-2.5 cursor-pointer px-5 h-9 block w-fit bg-[#FF885B] rounded-full shadow-sm text-xs text-white mx-auto transition-all duration-500 hover:bg-[#fc7f51] lg:mx-0"
+              className="py-2.5 cursor-pointer px-5 h-9 block w-fit bg-[#48A5C4] rounded-full shadow-sm text-xs text-white mx-auto transition-all duration-500 hover:bg-[#4399b6] lg:mx-0"
             >
               Contact us
             </Link>
@@ -171,7 +171,7 @@ export default function Footer() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     clip-rule="evenodd"
                     d="M13.9191 1.10651C14.558 1.27906 15.0602 1.78251 15.2299 2.42069C15.5388 3.57887 15.5388 5.99687 15.5388 5.99687C15.5388 5.99687 15.5388 8.41487 15.2299 9.57306C15.0578 10.2136 14.5556 10.7171 13.9191 10.8872C12.7638 11.1969 8.12875 11.1969 8.12875 11.1969C8.12875 11.1969 3.49603 11.1969 2.33844 10.8872C1.69952 10.7147 1.19735 10.2112 1.0276 9.57306C0.71875 8.41487 0.71875 5.99687 0.71875 5.99687C0.71875 5.99687 0.71875 3.57887 1.0276 2.42069C1.1997 1.78015 1.70188 1.27669 2.33844 1.10651C3.49603 0.796875 8.12875 0.796875 8.12875 0.796875C8.12875 0.796875 12.7638 0.796875 13.9191 1.10651ZM10.4981 5.99687L6.6481 8.22578V3.76796L10.4981 5.99687Z"
                     fill="white"

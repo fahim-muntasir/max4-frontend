@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Experience() {
   return (
@@ -21,9 +22,11 @@ export default function Experience() {
             voluptas nihil voluptatibus molestias, facere possimus?
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-[#FF885B] border-0 py-2 px-6 focus:outline-none hover:bg-[#fc7f51] rounded text-lg">
-              About Us
-            </button>
+            <Link href="/about">
+              <button className="inline-flex text-white bg-[#48A5C4] border-0 py-2 px-6 focus:outline-none hover:bg-[#4399b6] rounded text-lg">
+                About Us
+              </button>
+            </Link>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

@@ -18,7 +18,7 @@ export default function Videos() {
               ></iframe>
               <div className="p-6 text-center bg-white">
                 <h1 className="title-font uppercase text-lg font-medium text-gray-900 mb-3">
-                  Machine
+                  Sports shoe machines
                 </h1>
               </div>
             </div>
@@ -36,7 +36,7 @@ export default function Videos() {
               ></iframe>
               <div className="p-6 text-center bg-white">
                 <h1 className="title-font text-lg uppercase font-medium text-gray-900 mb-3">
-                  Row Products
+                  Leather shoe machines
                 </h1>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function Videos() {
               ></iframe>
               <div className="p-6 text-center bg-white">
                 <h1 className="title-font text-lg uppercase font-medium text-gray-900 mb-3">
-                  Services
+                  Leather goods machines
                 </h1>
               </div>
             </div>
