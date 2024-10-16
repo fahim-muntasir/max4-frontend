@@ -1,14 +1,21 @@
 "use client";
 import React, { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
-import { FaWhatsapp } from "react-icons/fa";
-import { AiOutlineMail, AiOutlineDown, AiOutlineUp } from "react-icons/ai";
+import { FiPhone } from "react-icons/fi";
+import {
+  AiOutlineMail,
+  AiOutlineDown,
+  AiOutlineUp,
+  AiOutlineMenu,
+  AiOutlineClose,
+} from "react-icons/ai";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import usePathname hook
 
 export default function Navbar() {
   const pathname = usePathname(); // Get the current path
   const [dropdownOpen, setDropdownOpen] = useState(false); // Dropdown state for products
+  const [menuOpen, setMenuOpen] = useState(false); // Mobile menu state
 
   const isActive = (path) => pathname === path;
 
@@ -17,24 +24,56 @@ export default function Navbar() {
       {/* Top contact info bar */}
       <div className="bg-[#48A5C4]">
         <div className="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <marquee behavior="scroll" direction="left" className="block md:hidden">
+            <div className="flex">
             <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
-              <CiLocationOn className="text-xl" />
+              <CiLocationOn className="text-sm" />
               <span className="text-sm">
                 401/B, 3rd Floor, Plot #Ga Block #D, Satmasjid Super Market,
                 Mohammadpur, Dhaka-1207, Bangladesh
               </span>
             </a>
             <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
-              <FaWhatsapp className="text-xl" />
+              <FiPhone className="text-sm" />
               <span className="text-sm">+88 01635 404 525</span>
             </a>
             <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
-              <FaWhatsapp className="text-xl" />
-              <span className="text-sm">+88 01718 123 414</span>
+              <FiPhone className="text-sm" />
+              <span className="text-sm">+88 01711 458 474</span>
             </a>
             <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
-              <AiOutlineMail className="text-xl" />
+              <FiPhone className="text-sm" />
+              <span className="text-sm">+88 01914 296 514</span>
+            </a>
+            <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
+              <AiOutlineMail className="text-sm" />
+              <span className="text-sm">max4technology@gmail.com</span>
+            </a>
+            </div>
+          </marquee>
+
+          <nav className="hidden md:ml-auto md:flex flex-wrap justify-center items-center text-base px-2 md:px-0">
+            <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
+              <CiLocationOn className="text-3xl md:text-xl" />
+              <span className="text-sm">
+                401/B, 3rd Floor, Plot #Ga Block #D, Satmasjid Super Market,
+                Mohammadpur, Dhaka-1207, Bangladesh
+              </span>
+            </a>
+            <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
+              <FiPhone className="text-sm" />
+              <span className="text-sm">+88 01635 404 525</span>
+            </a>
+            <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
+              <FiPhone className="text-sm" />
+              <span className="text-sm">+88 01711 458 474</span>
+            </a>
+            <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
+              <FiPhone className="text-sm" />
+              <span className="text-sm">+88 01914 296 514</span>
+            </a>
+            <a className="mr-5 text-[#FFE5CF] flex items-center gap-1">
+              <AiOutlineMail className="text-sm" />
               <span className="text-sm">max4technology@gmail.com</span>
             </a>
           </nav>
@@ -43,7 +82,7 @@ export default function Navbar() {
 
       {/* Main navbar */}
       <div className="bg-[#ECEEEE]">
-        <div className="container mx-auto flex flex-wrap py-7 flex-col md:flex-row items-center">
+        <div className="container mx-auto flex flex-wrap pl-2 pr-4 md:px-0 py-2 md:py-7 md:flex-row items-center justify-between">
           <Link
             href="/"
             className="flex title-font font-medium items-center text-[#FF885B] mb-4 md:mb-0"
@@ -51,8 +90,114 @@ export default function Navbar() {
             <img src="/assets/img/logo2.png" alt="logo" />
           </Link>
 
+          {/* Hamburger icon for mobile */}
+          <button
+            className="md:hidden text-[#33372C]"
+            onClick={() => setMenuOpen(true)}
+          >
+            <AiOutlineMenu className="text-2xl" />
+          </button>
+
+          {/* menu for mobile */}
+          <nav
+            className={`${
+              menuOpen ? "block" : "hidden"
+            } md:hidden absolute top-0 right-0 shadow-2xl p-5 w-4/5 bg-[#ECEEEE] h-screen items-center text-sm justify-center uppercase z-20`}
+          >
+            <button className="mb-6" onClick={() => setMenuOpen(false)}>
+              <AiOutlineClose className="text-2xl" />
+            </button>
+            {/* Products dropdown menu with arrow */}
+            <div
+              className="relative group flex items-center gap-2 mb-3"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <span className="text-[#33372C] cursor-pointer font-semibold text-lg">
+                Products
+              </span>
+              {dropdownOpen ? (
+                <AiOutlineUp className="text-sm" />
+              ) : (
+                <AiOutlineDown className="text-sm" />
+              )}
+              <span
+                className={`absolute left-0 bottom-[-5px] rounded-full w-full h-0.5 bg-[#48A5C4] transition-transform duration-300 origin-left ${
+                  isActive("/products")
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              ></span>
+
+              {/* Dropdown items */}
+              {dropdownOpen && (
+                <div className="absolute top-[25px] left-0 mt-1 bg-white shadow-lg rounded-md p-2 w-60 z-10">
+                  <Link
+                    href="/products/sports-shoe-machines"
+                    className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
+                  >
+                    Sports shoe machines
+                  </Link>
+                  <Link
+                    href="/products/leather-shoe-machines"
+                    className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
+                  >
+                    Leather shoe machines
+                  </Link>
+                  <Link
+                    href="/products/leather-goods-machines"
+                    className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
+                  >
+                    Leather goods machines
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link href="/gallery" className="relative group block mb-3 text-lg">
+              <span className="text-[#33372C] cursor-pointer font-semibold">
+                Gallery
+              </span>
+              <span
+                className={`absolute left-0 bottom-[-5px] rounded-full w-full h-0.5 bg-[#48A5C4] transition-transform duration-300 origin-left ${
+                  isActive("/gallery")
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              ></span>
+            </Link>
+
+            <Link href="/about" className="relative group block mb-3">
+              <span className="text-[#33372C] cursor-pointer font-semibold text-lg">
+                About Us
+              </span>
+              <span
+                className={`absolute left-0 bottom-[-5px] rounded-full w-full h-0.5 bg-[#48A5C4] transition-transform duration-300 origin-left ${
+                  isActive("/about")
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              ></span>
+            </Link>
+
+            <Link href="/contact" className="relative group block">
+              <span className="text-[#33372C] cursor-pointer font-semibold text-lg">
+                Contact Us
+              </span>
+              <span
+                className={`absolute left-0 bottom-[-5px] rounded-full w-full h-0.5 bg-[#48A5C4] transition-transform duration-300 origin-left ${
+                  isActive("/contact")
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              ></span>
+            </Link>
+          </nav>
+
           {/* Navigation links with hover underline and active link underline */}
-          <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-sm md:text-base lg:text-base justify-center uppercase gap-3 md:gap-8">
+          <nav
+            className={`hidden md:block md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex-col md:flex-row items-center text-sm md:text-base lg:text-base justify-center uppercase gap-3 md:gap-8`}
+          >
             {/* Products dropdown menu with arrow */}
             <div
               className="relative group flex items-center gap-2"
@@ -77,7 +222,7 @@ export default function Navbar() {
 
               {/* Dropdown items */}
               {dropdownOpen && (
-                <div className="absolute top-[25px] left-0 mt-1 bg-white shadow-lg rounded-md p-2 w-60">
+                <div className="absolute top-[25px] left-0 mt-1 bg-white shadow-lg rounded-md p-2 w-60 z-10">
                   <Link
                     href="/products/sports-shoe-machines"
                     className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
