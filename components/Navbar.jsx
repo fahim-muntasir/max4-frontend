@@ -85,7 +85,7 @@ export default function Navbar() {
         <div className="container mx-auto block md:flex flex-wrap pl-2 pr-4 md:px-0 py-2 md:py-7 md:flex-row items-center justify-between">
           <Link
             href="/"
-            className="flex title-font font-medium items-center text-[#FF885B] mb-2 md:mb-0"
+            className="flex title-font font-medium items-center text-[#FF885B] mb-4 md:mb-0"
           >
             <img src="/assets/img/logo2.png" alt="logo" />
           </Link>
