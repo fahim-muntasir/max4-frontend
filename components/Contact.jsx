@@ -2,7 +2,8 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="container mx-auto mb-36 bg-[#557C56] rounded-lg">
+    <div className="px-4 md:px-0">
+      <div className="container mx-auto mb-36 bg-[#557C56] rounded-lg">
       <div className="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
         <div>
           <h1 className="text-4xl font-bold text-white">Get in Touch</h1>
@@ -210,6 +211,7 @@ export default function Contact() {
           className="border-none w-full rounded-lg"
         ></iframe>
       </div>
+    </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function Gallery() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
           <h1 className="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl md:leading-normal">
             Gallery
-            <span className="text-[#FF885B]"> Showcase</span>
+            <span className="text-[#252278]"> Showcase</span>
           </h1>
           <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
             Invest intelligently and discover a better way to manage your entire
@@ -15,7 +15,7 @@ export default function Gallery() {
           </p>
         </div>
       </section>
-      <section className="container mx-auto py-14">
+      <section className="container mx-auto py-14 px-4 md:px-0">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div>
             <img
