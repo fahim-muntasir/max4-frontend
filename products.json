@@ -1,0 +1,49 @@
+{
+  "sports-shoe-machines": [
+    "/assets/img/sports_shoes/conveyor1.jpg",
+    "/assets/img/sports_shoes/high_frequency.jpg",
+    "/assets/img/sports_shoes/Image_20241029110152.png",
+    "/assets/img/sports_shoes/Image_20241029110238.jpg",
+    "/assets/img/sports_shoes/conveyor2.jpg",
+    "/assets/img/sports_shoes/Image_20241029110253.jpg",
+    "/assets/img/sports_shoes/heel_lasting.jpg",
+    "/assets/img/sports_shoes/Image_20241029110215.jpg",
+    "/assets/img/sports_shoes/Image_20241029110352.jpg",
+    "/assets/img/sports_shoes/lamination.jpg",
+    "/assets/img/sports_shoes/oc.jpg",
+    "/assets/img/sports_shoes/fusing_machine.webp",
+    "/assets/img/sports_shoes/plane_cutting_machine.jpg",
+    "/assets/img/sports_shoes/oc.jpg",
+    "/assets/img/sports_shoes/walled _sole_pressing_machine.jpg"
+  ],
+  "leather-shoe-machines": [
+    "/assets/img/leather_shoes/ATOM_turning_arm.png",
+    "/assets/img/leather_shoes/ATOM-S-558-900x947.png",
+    "/assets/img/leather_shoes/back_part_molding.jpg",
+    "/assets/img/leather_shoes/conveyor_image_for_leather_line.jpg",
+    "/assets/img/leather_shoes/flat_bed.jpg",
+    "/assets/img/leather_shoes/heel_lasting.jpg",
+    "/assets/img/leather_shoes/m591.jpg",
+    "/assets/img/leather_shoes/polishing.jpg",
+    "/assets/img/leather_shoes/skiving_machine.jpg",
+    "/assets/img/leather_shoes/splitting_machine.jpg",
+    "/assets/img/leather_shoes/Toe_lasting_machine.jpg"
+  ],
+  "leather-goods-machines": [
+    "/assets/img/leather_goods/669.png",
+    "/assets/img/leather_goods/A_zipper_teech_opening.jpg",
+    "/assets/img/leather_goods/ATOM_turning_arm.png",
+    "/assets/img/leather_goods/belt_dryer.jpg",
+    "/assets/img/leather_goods/belt_embossing.png",
+    "/assets/img/leather_goods/cylinder.jpg",
+    "/assets/img/leather_goods/folding_machine.png",
+    "/assets/img/leather_goods/mauser_1245.png",
+    "/assets/img/leather_goods/skiving_machine.jpg",
+    "/assets/img/leather_goods/splitting_machine.jpg"
+  ],
+  "hand-gloves": [
+    "/assets/img/hand_gloves/0303.png",
+    "/assets/img/hand_gloves/ATOM_turning_arm.png",
+    "/assets/img/hand_gloves/Image_20241029110306.jpg"
+  ]
+}

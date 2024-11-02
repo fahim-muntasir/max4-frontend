@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import allProducts from "@/products.json";
 
 export default function ProductPage() {
   const { slug } = useParams();
@@ -13,20 +14,7 @@ export default function ProductPage() {
   const [isImageLoaded, setIsImageLoaded] = useState(false); // Track image loading
   const title = slug?.split("-")?.join(" ");
 
-  const images = [
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg",
-  ];
+  const images = allProducts[slug] || [];
 
   // Function to handle image click and open modal
   const openModal = (image) => {
@@ -57,10 +45,11 @@ export default function ProductPage() {
 
       <section className="container mx-auto py-14 px-4 md:px-0">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((image, index) => (
+          {images?.length === 0 && "The product is empty!"}
+          {images?.map((image, index) => (
             <div key={index}>
               <Image
-                className="h-auto max-w-full rounded-lg cursor-pointer"
+                className="max-h-[500px] max-w-full rounded-lg cursor-pointer"
                 src={image}
                 width={500}
                 height={200}
