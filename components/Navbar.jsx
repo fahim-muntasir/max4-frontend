@@ -137,6 +137,18 @@ export default function Navbar() {
                   >
                     Leather goods machines
                   </Link>
+                  <Link
+                    href="/products/hand-gloves"
+                    className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
+                  >
+                    Hand gloves
+                  </Link>
+                  <Link
+                    href="/products/lab-testing-equipment"
+                    className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
+                  >
+                    Lab Testing equipment
+                  </Link>
                 </div>
               )}
             </div>
