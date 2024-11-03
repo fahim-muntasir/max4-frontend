@@ -29,8 +29,8 @@ export default function Hero() {
             </div>
             <div className="container mx-auto px-12 md:px-20 lg:px-28">
               <p className=" text-2xl md:text-4xl lg:text-5xl text-gray-200 lg:leading-relaxed bg-[#3737378c] px-5 py-2 w-full md:w-full lg:w-3/4">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Delectus, nesciunt?
+                Expert Machinery Solutions for the Footwear and Leather Goods
+                Industry
               </p>
             </div>
           </li>
@@ -45,8 +45,8 @@ export default function Hero() {
             </div>
             <div className="container mx-auto px-12 md:px-20 lg:px-28">
               <p className=" text-2xl md:text-4xl lg:text-5xl text-gray-200 lg:leading-relaxed bg-[#3737378c] px-5 py-2 w-full md:w-full lg:w-3/4">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Delectus, nesciunt?
+                Trusted Machinery Supplier for Footwear and Leather Goods Since
+                2024
               </p>
             </div>
           </li>

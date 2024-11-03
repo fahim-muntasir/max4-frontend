@@ -7,19 +7,17 @@ export default function Experience() {
       <div className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            OVER 2 YEARS OF EXPERIENCE
+            Expert Machinery Solutions for the Footwear and Leather Goods
+            Industry
           </h1>
           <p className="mb-8 leading-relaxed">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            doloribus magnam at hic rerum, voluptatem iste eaque architecto
-            deleniti porro labore? Amet accusamus consequuntur, eum mollitia
-            maxime vel. Similique aperiam minus quisquam quo soluta aspernatur
-            voluptatibus rem recusandae architecto aut, reprehenderit sit,
-            consequatur eligendi iste numquam voluptas ipsam nobis quos dolores
-            quibusdam asperiores cum. Dolores reprehenderit ullam dolorem
-            voluptates perferendis esse aut nulla sapiente ab, illum, maxime
-            tenetur. Soluta quos reprehenderit magnam blanditiis laudantium
-            voluptas nihil voluptatibus molestias, facere possimus?
+            MAX4 TECHNOLOGY HAS BEEN OPERATING FROM 2024. WE ARE PROVIDING ALL
+            KINDS OF MACHINERY FOR FOOTWEAR AND LEATHER GOODS SECTOR FROM CHINA,
+            TAIWAN AND ITALY. WE ARE AN EXPERIENCED TEAM WHO WORKING IN FOOTWEAR
+            AND LEATHER GOODS SECTOR MORE THAN 15 YEARS. WE ARE WELL CAPABLE TO
+            PROVIDE YOU QUALITY MACHINERY WITH BEST COMPETITIVE PRICE. WE HAVE
+            AN EXPERIENCED TECHNICAL TEAM FOR INSTALLATION OUR SUPPLIED
+            MACHINERIES AND LIFE-LONG TIME TECHNICAL SUPPORT.
           </p>
           <div className="flex justify-center">
             <Link href="/about">

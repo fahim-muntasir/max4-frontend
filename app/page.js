@@ -4,7 +4,7 @@ const Hero = dynamic(() => import('@/components/Hero'), { ssr: false });
 import Footer from "@/components/Footer";
 import Experience from "@/components/Experience";
 import Service from "@/components/Service";
-import Videos from "@/components/Videos";
+// import Videos from "@/components/Videos";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Experience />
       <Service />
-      <Videos />
+      {/* <Videos /> */}
       <Contact />
       <Footer />
     </>
