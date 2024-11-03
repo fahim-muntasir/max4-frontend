@@ -118,7 +118,7 @@ export default function Navbar() {
 
               {/* Dropdown items */}
               {dropdownOpen && (
-                <div className="absolute top-[25px] left-0 mt-1 bg-white shadow-lg rounded-md p-2 w-60 z-10">
+                <div className="absolute top-[25px] left-0 mt-1 bg-white shadow-lg rounded-md p-2 w-64 z-10">
                   <Link
                     href="/products/sports-shoe-machines"
                     className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
@@ -144,10 +144,10 @@ export default function Navbar() {
                     Hand gloves
                   </Link>
                   <Link
-                    href="/products/lab-testing-equipment"
+                    href="/products/lab-testing-equipment-and-others"
                     className="block px-4 py-2 text-sm text-[#33372C] hover:bg-[#48A5C4] hover:text-white rounded"
                   >
-                    Lab Testing equipment
+                    Lab Testing equipments and others
                   </Link>
                 </div>
               )}
