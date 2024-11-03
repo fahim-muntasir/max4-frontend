@@ -9,13 +9,12 @@ export default function Footer() {
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
             <Link
               href="/"
-              className="cursor-pointer flex justify-center lg:justify-start text-2xl text-[#FF885B]"
+              className="cursor-pointer flex justify-center lg:justify-start"
             >
               <img src="/assets/img/logo2.png" alt="logo" />
             </Link>
             <p className="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
-              Trusted in more than 100 countries & 5 million customers. Have any
-              query ?
+              We are providing all kinds of machinery. Have any query ?
             </p>
             <Link
               href="/contact"
@@ -28,28 +27,36 @@ export default function Footer() {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Max4bd</h4>
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href="/"
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href="/about"
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
-              <li>
-                <a
-                  href="javascript:;"
+              <li className="mb-6">
+                <Link
+                  href="/gallery"
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
                   Gallery
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="cursor-pointer text-gray-600 hover:text-gray-900"
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,28 +64,44 @@ export default function Footer() {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Products</h4>
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href="/products/sports-shoe-machines"
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
-                  Figma UI System
-                </a>
+                  Sports shoe machines
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href="/products/leather-shoe-machines"
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
-                  Icons Assets
-                </a>
+                  Leather shoe machines
+                </Link>
+              </li>
+              <li className="mb-6">
+                <Link
+                  href="/products/leather-goods-machines"
+                  className="cursor-pointer text-gray-600 hover:text-gray-900"
+                >
+                  Leather goods machines
+                </Link>
+              </li>
+              <li className="mb-6">
+                <Link
+                  href="/products/hand-gloves"
+                  className="cursor-pointer text-gray-600 hover:text-gray-900"
+                >
+                  Hand gloves
+                </Link>
               </li>
               <li>
-                <a
-                  href="javascript:;"
+                <Link
+                  href="/products/lab-testing-equipment-and-others"
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
-                  Responsive Blocks
-                </a>
+                  Lab Testing equipments and others
+                </Link>
               </li>
             </ul>
           </div>
