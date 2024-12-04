@@ -110,7 +110,7 @@ export default function Footer() {
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6">
                 <a
-                  href="javascript:;"
+                  href=""
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
                   Customer Support
@@ -118,7 +118,7 @@ export default function Footer() {
               </li>
               <li className="mb-6">
                 <a
-                  href="javascript:;"
+                  href=""
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
                   Terms & Conditions
@@ -126,7 +126,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href=""
                   className="cursor-pointer text-gray-600 hover:text-gray-900"
                 >
                   Privacy Policy
@@ -150,7 +150,7 @@ export default function Footer() {
             </span>
             <div className="flex mt-4 space-x-4 sm:justify-center sm:mt-0">
               <a
-                href="javascript:;"
+                href=""
                 className="w-8 cursor-pointer h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-black/80 hover:bg-black"
               >
                 <svg
@@ -168,7 +168,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="javascript:;"
+                href=""
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#337FFF] hover:bg-gray-900"
               >
                 <svg
@@ -184,7 +184,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="javascript:;"
+                href=""
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#FF0000] hover:bg-gray-900"
               >
                 <svg

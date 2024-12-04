@@ -1,24 +1,25 @@
 "use client";
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import Image from "next/image";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null); // State to hold selected image
   const [isOpen, setIsOpen] = useState(false); // State to toggle modal visibility
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const images = [
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg",
+    "/assets/img/gallery/img1.jpg",
+    "/assets/img/gallery/img3.jpg",
+    "/assets/img/gallery/img5.jpg",
+    "/assets/img/gallery/img9.jpg",
+    "/assets/img/gallery/img6.jpg",
+    "/assets/img/gallery/img2.jpg",
+    "/assets/img/gallery/img8.jpg",
+    "/assets/img/gallery/img10.jpg",
+    "/assets/img/gallery/img11.jpg",
+    "/assets/img/gallery/img12.jpg",
+    "/assets/img/gallery/img7.jpg",
   ];
 
   // Function to handle image click and open modal
@@ -52,9 +53,12 @@ export default function Gallery() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <div key={index}>
-              <img
-                className="h-auto max-w-full rounded-lg cursor-pointer"
+              <Image
+                className="max-h-[500px] max-w-full rounded-lg cursor-pointer"
                 src={image}
+                width={500}
+                height={200}
+                quality={100}
                 alt={`Gallery Image ${index + 1}`}
                 onClick={() => openModal(image)} // Open modal on click
               />
@@ -66,24 +70,31 @@ export default function Gallery() {
       {/* Modal for larger image */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-          onClick={closeModal} // Close modal when clicking outside image
-        >
-          <div className="relative mx-5" onClick={(e) => e.stopPropagation()}>
-            {/* Stop propagation when clicking inside modal */}
-            <img
-              src={selectedImage}
-              alt="Selected Large"
-              className="max-w-full max-h-screen object-contain rounded-lg"
-            />
+        className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+        onClick={closeModal} // Close modal when clicking outside image
+      >
+        <div className="relative mx-5" onClick={(e) => e.stopPropagation()}>
+          {/* Stop propagation when clicking inside modal */}
+          <Image
+            src={selectedImage}
+            width={800}
+            height={100}
+            quality={100}
+            alt="Selected Large"
+            className="max-w-full max-h-screen object-contain rounded-lg"
+            loading="eager"
+            onLoadingComplete={() => setIsImageLoaded(true)} // Set image as loaded
+          />
+          {isImageLoaded && (
             <button
               className="absolute top-4 right-4 text-white text-2xl bg-red-400 rounded-full p-2 h-10 w-10 hover:bg-red-500"
               onClick={closeModal} // Close modal on button click
             >
               <IoClose />
             </button>
-          </div>
+          )}
         </div>
+      </div>
       )}
     </>
   );

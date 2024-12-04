@@ -1,9 +1,73 @@
 "use client";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import Image from "next/image";
 import "./hero.css";
 
 export default function Hero() {
+  const sliderImages = [
+    {
+      avatar: "/assets/img/slider/banner1.jpg",
+      title:
+        "Expert Machinery Solutions for the Footwear and Leather Goods Industry",
+    },
+    {
+      avatar: "/assets/img/slider/banner2.jpg",
+      title:
+        "Trusted Machinery Supplier for Footwear and Leather Goods Since 2024",
+    },
+    {
+      avatar: "/assets/img/slider/banner3.jpg",
+      title:
+        "Expert Machinery Solutions for the Footwear and Leather Goods Industry",
+    },
+    {
+      avatar: "/assets/img/slider/banner4.jpg",
+      title:
+        "Trusted Machinery Supplier for Footwear and Leather Goods Since 2024",
+    },
+    {
+      avatar: "/assets/img/slider/banner5.jpg",
+      title:
+        "Expert Machinery Solutions for the Footwear and Leather Goods Industry",
+    },
+    {
+      avatar: "/assets/img/slider/banner6.jpg",
+      title:
+        "Trusted Machinery Supplier for Footwear and Leather Goods Since 2024",
+    },
+    {
+      avatar: "/assets/img/slider/banner7.jpg",
+      title:
+        "Expert Machinery Solutions for the Footwear and Leather Goods Industry",
+    },
+    {
+      avatar: "/assets/img/slider/banner8.jpg",
+      title:
+        "Trusted Machinery Supplier for Footwear and Leather Goods Since 2024",
+    },
+    {
+      avatar: "/assets/img/slider/banner9.jpg",
+      title:
+        "Expert Machinery Solutions for the Footwear and Leather Goods Industry",
+    },
+    {
+      avatar: "/assets/img/slider/banner10.jpg",
+      title:
+        "Trusted Machinery Supplier for Footwear and Leather Goods Since 2024",
+    },
+    {
+      avatar: "/assets/img/slider/banner11.jpg",
+      title:
+        "Expert Machinery Solutions for the Footwear and Leather Goods Industry",
+    },
+    {
+      avatar: "/assets/img/slider/banner12.jpg",
+      title:
+        "Trusted Machinery Supplier for Footwear and Leather Goods Since 2024",
+    },
+  ];
+  
   return (
     <Splide
       hasTrack={false}
@@ -18,39 +82,28 @@ export default function Hero() {
       }}
     >
       <SplideTrack>
-        <SplideSlide>
-          <li className="slider-item splide__slide">
-            <div className="slider-image">
-              <img
-                className="img-fluid"
-                src="https://images.unsplash.com/photo-1611117775350-ac3950990985?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="banner"
-              />
-            </div>
-            <div className="container mx-auto px-12 md:px-20 lg:px-28">
-              <p className=" text-2xl md:text-4xl lg:text-5xl text-gray-200 lg:leading-relaxed bg-[#3737378c] px-5 py-2 w-full md:w-full lg:w-3/4">
-                Expert Machinery Solutions for the Footwear and Leather Goods
-                Industry
-              </p>
-            </div>
-          </li>
-        </SplideSlide>
-        <SplideSlide>
-          <li className="slider-item splide__slide">
-            <div className="slider-image">
-              <img
-                src="https://images.unsplash.com/photo-1655122878062-a9e885391a1b?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="banner"
-              />
-            </div>
-            <div className="container mx-auto px-12 md:px-20 lg:px-28">
-              <p className=" text-2xl md:text-4xl lg:text-5xl text-gray-200 lg:leading-relaxed bg-[#3737378c] px-5 py-2 w-full md:w-full lg:w-3/4">
-                Trusted Machinery Supplier for Footwear and Leather Goods Since
-                2024
-              </p>
-            </div>
-          </li>
-        </SplideSlide>
+        {sliderImages.map((img, index) => (
+          <SplideSlide key={img?.avatar}>
+            <li className="slider-item splide__slide">
+              <div className="slider-image">
+                <Image
+                  className="img-fluid w-full h-auto"
+                  src={img?.avatar}
+                  alt={`banner ${index}`}
+                  width={900}
+                  height={700}
+                  quality={100}
+                  objectFit="content"
+                />
+              </div>
+              <div className="container mx-auto px-12 md:px-20 lg:px-28">
+                <p className=" text-2xl md:text-4xl lg:text-5xl text-gray-200 lg:leading-relaxed bg-[#3737378c] px-5 py-2 w-full md:w-full lg:w-3/4">
+                  {img?.title}
+                </p>
+              </div>
+            </li>
+          </SplideSlide>
+        ))}
       </SplideTrack>
       <div className="splide__arrows">
         <button className="splide__arrow splide__arrow--prev splide__arrow1">
